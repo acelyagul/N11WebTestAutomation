@@ -23,7 +23,7 @@ public class Driver {
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
+                    driver= WebDriverManager.firefoxdriver().remoteAddress("http://localhost:4444/wd/hub").create();
                     break;
             }
         }
